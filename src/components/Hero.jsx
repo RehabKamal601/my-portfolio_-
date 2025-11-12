@@ -103,7 +103,7 @@ const Hero = () => {
             <div className="relative w-full max-w-md mx-auto lg:ml-auto">
               <div className="aspect-square rounded-full overflow-hidden bg-wheat-100">
                 <img
-                  src="images/hero.png"
+                  src="images/Pasted image.png"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

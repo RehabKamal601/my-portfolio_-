@@ -141,14 +141,21 @@ const About = () => {
                 isDark ? 'text-gray-300' : 'text-amber-700/80'
               }`}
             >
-              Passionate Full Stack Developer crafting digital experiences with clean code, modern technologies, and innovative solutions
-            </motion.p>
+I'm a Junior Full Stack Web Developer with a strong foundation in open source technologies and hands-on experience in building 
+responsive web applications. Skilled in using modern frameworks like Laravel, Vue.js, Node.js, and Angular to develop both frontend
+ and backend solutions.
+
+I graduated from the Faculty of Computers and Information at Minia University and completed 
+a 9-month intensive Open Source training program at the Information Technology Institute (ITI). 
+I'm passionate about writing clean, maintainable code, collaborating in team environments, 
+and continuously learning new technologies.            
+</motion.p>
           </motion.div>
 
           {/* Enhanced Content Cards */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* Introduction Card */}
-            <motion.div
+            {/* <motion.div
               variants={cardVariants}
               whileHover="hover"
               className={`group relative rounded-3xl p-8 shadow-xl border-2 transition-all duration-500 h-full ${
@@ -192,10 +199,10 @@ const About = () => {
                   }`}>Laravel, Vue.js, Node.js, and Angular</strong> to develop both frontend and backend solutions.
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Education Card */}
-            <motion.div
+            {/* <motion.div
               variants={cardVariants}
               whileHover="hover"
               className={`group relative rounded-3xl p-8 shadow-xl border-2 transition-all duration-500 h-full ${
@@ -238,11 +245,11 @@ const About = () => {
                   }`}>Information Technology Institute (ITI)</strong>.
                 </p>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>*/}
+          </div> 
 
           {/* Skills Section */}
-          <motion.div
+          {/* <motion.div
             variants={itemVariants}
             className="mb-16"
           >
@@ -283,10 +290,10 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Enhanced Stats Section */}
-          <motion.div
+          {/* <motion.div
             variants={itemVariants}
             className="grid grid-cols-2 lg:grid-cols-4 gap-6"
           >
@@ -310,7 +317,7 @@ const About = () => {
                 }`}>{stat.label}</div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>
