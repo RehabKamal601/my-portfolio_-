@@ -1,7 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './Navbar'
+import Footer from './Footer'
+import { useTheme } from '../context/ThemeContext'
 
 const Layout = ({ children }) => {
+  const { isDark } = useTheme();
+  
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -26,7 +30,7 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className="min-h-screen bg-wheat-50">
+    <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'bg-gray-950' : 'bg-wheat-50'}`}>
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
@@ -39,11 +43,7 @@ const Layout = ({ children }) => {
           {children}
         </motion.main>
       </AnimatePresence>
-      <footer className="bg-wheat-100 py-6 mt-20">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-wheat-700">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
