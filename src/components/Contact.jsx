@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTheme } from '../context/ThemeContext';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaGlobe } from 'react-icons/fa';
 
 const Contact = () => {
   const { isDark } = useTheme();
@@ -8,6 +9,27 @@ const Contact = () => {
     threshold: 0.1,
     triggerOnce: true
   });
+
+  const socialLinks = [
+    { 
+      name: 'LinkedIn', 
+      icon: <FaLinkedin className="w-5 h-5" />, 
+      url: 'https://www.linkedin.com/in/rehab-kamal-7574801b4/',
+      color: 'from-blue-500 to-blue-600'
+    },
+    { 
+      name: 'GitHub', 
+      icon: <FaGithub className="w-5 h-5" />, 
+      url: 'https://github.com/RehabKamal601',
+      color: 'from-gray-700 to-gray-900'
+    },
+    { 
+      name: 'Portfolio', 
+      icon: <FaGlobe className="w-5 h-5" />, 
+      url: 'https://my-portfolio-five-woad-93.vercel.app/',
+      color: 'from-green-500 to-green-600'
+    }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -80,7 +102,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className={`text-lg ${isDark ? 'text-amber-400' : 'text-amber-600'}`}>📧</span>
+                  <FaEnvelope className={`text-lg mt-1 ${isDark ? 'text-amber-400' : 'text-amber-600'}`} />
                   <div>
                     <p className={`font-medium transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Email</p>
                     <a 
@@ -93,7 +115,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <span className={`text-lg ${isDark ? 'text-amber-400' : 'text-amber-600'}`}>📱</span>
+                  <FaPhone className={`text-lg mt-1 ${isDark ? 'text-amber-400' : 'text-amber-600'}`} />
                   <div>
                     <p className={`font-medium transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Phone</p>
                     <a 
@@ -106,7 +128,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <span className={`text-lg ${isDark ? 'text-amber-400' : 'text-amber-600'}`}>📍</span>
+                  <FaMapMarkerAlt className={`text-lg mt-1 ${isDark ? 'text-amber-400' : 'text-amber-600'}`} />
                   <div>
                     <p className={`font-medium transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Location</p>
                     <p className={`transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -116,17 +138,22 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Social Links Placeholder */}
+              {/* Social Links with Icons */}
               <div className="mt-8 pt-6 border-t border-gray-600/30">
                 <h4 className={`font-semibold mb-4 transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   Connect With Me
                 </h4>
                 <div className="flex gap-4">
-                  {[1, 2, 3, 4].map((item) => (
-                    <div 
-                      key={item}
-                      className={`w-10 h-10 rounded-lg border-2 border-dashed transition-colors duration-300 ${isDark ? 'border-gray-600' : 'border-amber-300'}`}
-                    ></div>
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={social.name}
+                      href={social.url}
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`w-10 h-10 rounded-lg transition-all duration-300 flex items-center justify-center ${isDark ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-amber-100 hover:bg-amber-200 text-amber-700'}`}
+                    >
+                      {social.icon}
+                    </motion.a>
                   ))}
                 </div>
               </div>
