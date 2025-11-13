@@ -5,6 +5,7 @@ const Hero = () => {
   const { isDark } = useTheme();
   const phoneNumber = "01060530117";
   const whatsappLink = `https://wa.me/201060530117`;
+  const cvLink = "/images/Rehab-Kamal-Abdelhamed-Salem-Full-Stack.pdf"; // Update with your actual CV path
 
   return (
     <section id="hero" className={`min-h-screen flex items-center transition-colors duration-300 ${isDark ? 'bg-gray-950' : 'bg-white'}`}>
@@ -87,10 +88,40 @@ const Hero = () => {
                     <div className="font-semibold text-green-700">Message me</div>
                   </div>
                 </motion.a>
+
+                {/* View CV Button */}
+                <motion.a
+                  href={cvLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 px-5 py-3 rounded-xl shadow-md hover:shadow-lg border transition-all duration-300 group ${
+                    isDark
+                      ? 'bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700'
+                      : 'bg-white border-blue-200 text-gray-700 hover:bg-blue-50'
+                  }`}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    y: -2,
+                    backgroundColor: isDark ? "#374151" : "#dbeafe"
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className={`p-2 rounded-lg transition-colors ${
+                    isDark
+                      ? 'bg-gray-700 group-hover:bg-blue-500/20'
+                      : 'bg-blue-100 group-hover:bg-blue-200'
+                  }`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm text-gray-500">CV</div>
+                    <div className={`font-semibold ${isDark ? 'text-blue-400' : 'text-blue-700'}`}>View CV</div>
+                  </div>
+                </motion.a>
               </div>
             </motion.div>
-
-           
           </motion.div>
 
           {/* Profile Image */}
