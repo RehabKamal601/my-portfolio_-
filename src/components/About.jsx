@@ -51,19 +51,19 @@ const About = () => {
     }
   };
 
-  const stats = [
-    { number: "2+", label: "Years Experience", icon: "🚀" },
-    { number: "20+", label: "Projects Completed", icon: "💻" },
-    { number: "10+", label: "Technologies", icon: "🛠️" },
-    { number: "100%", label: "Dedication", icon: "❤️" }
-  ];
+  // const stats = [
+  //   { number: "2+", label: "Years Experience", icon: "🚀" },
+  //   { number: "20+", label: "Projects Completed", icon: "💻" },
+  //   { number: "10+", label: "Technologies", icon: "🛠️" },
+  //   { number: "100%", label: "Dedication", icon: "❤️" }
+  // ];
 
-  const skills = [
-    { name: "Frontend", technologies: ["React", "Vue.js", "Angular", "JavaScript", "TypeScript"] },
-    { name: "Backend", technologies: ["Node.js", "Laravel", "PHP", "Python", "Django"] },
-    { name: "Database", technologies: ["MySQL", "MongoDB", "PostgreSQL"] },
-    { name: "Tools", technologies: ["Git", "Docker", "AWS", "REST APIs"] }
-  ];
+  // const skills = [
+  //   { name: "Frontend", technologies: ["React", "Vue.js", "Angular", "JavaScript", "TypeScript"] },
+  //   { name: "Backend", technologies: ["Node.js", "Laravel", "PHP", "Python", "Django"] },
+  //   { name: "Database", technologies: ["MySQL", "MongoDB", "PostgreSQL"] },
+  //   { name: "Tools", technologies: ["Git", "Docker", "AWS", "REST APIs"] }
+  // ];
 
   return (
     <section id="about" className={`py-24 transition-colors duration-500 relative overflow-hidden ${
@@ -99,7 +99,7 @@ const About = () => {
             variants={itemVariants}
             className="text-center mb-20"
           >
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl shadow-lg border mb-6 transition-all duration-500 ${
                 isDark 
@@ -107,13 +107,13 @@ const About = () => {
                   : 'bg-white/80 backdrop-blur-sm border-amber-200'
               }`}
             >
-              <div className={`w-2 h-2 rounded-full animate-pulse ${
+               <div className={`w-2 h-2 rounded-full animate-pulse ${
                 isDark ? 'bg-amber-400' : 'bg-amber-500'
-              }`}></div>
+              }`}></div> 
               <span className={`font-semibold text-sm transition-colors duration-300 ${
                 isDark ? 'text-amber-400' : 'text-amber-700'
-              }`}>ABOUT ME</span>
-            </motion.div>
+              }`}>ABOUT ME</span> 
+            </motion.div> */}
             
             <motion.h2 
               variants={itemVariants}
@@ -141,14 +141,16 @@ const About = () => {
                 isDark ? 'text-gray-300' : 'text-amber-700/80'
               }`}
             >
-I'm a Junior Full Stack Web Developer with a strong foundation in open source technologies and hands-on experience in building 
+{/* I'm a Junior Full Stack Web Developer with a strong foundation in open source technologies and hands-on experience in building 
 responsive web applications. Skilled in using modern frameworks like Laravel, Vue.js, Node.js, and Angular to develop both frontend
  and backend solutions.
 
 I graduated from the Faculty of Computers and Information at Minia University and completed 
 a 9-month intensive Open Source training program at the Information Technology Institute (ITI). 
 I'm passionate about writing clean, maintainable code, collaborating in team environments, 
-and continuously learning new technologies.            
+and continuously learning new technologies.             */}
+Full Stack Developer with expertise in modern frameworks and responsive web applications.
+ ITI-trained professional dedicated to clean code and continous learning.
 </motion.p>
           </motion.div>
 
