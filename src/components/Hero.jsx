@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 const Hero = () => {
   const { isDark } = useTheme();
   const phoneNumber = "01060530117";
-  const whatsappLink = `https://wa.me/2${phoneNumber}`;
+  const whatsappLink = `https://wa.me/201060530117`;
 
   return (
     <section id="hero" className={`min-h-screen flex items-center transition-colors duration-300 ${isDark ? 'bg-gray-950' : 'bg-white'}`}>
